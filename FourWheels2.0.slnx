@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FourWheels2.0/FourWheels2.0.vcxproj" Id="89cad661-3158-41eb-a37b-64c09ab509e6" />
+</Solution>
