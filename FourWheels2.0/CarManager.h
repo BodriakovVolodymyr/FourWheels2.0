@@ -19,6 +19,8 @@ public:
 
     void removeCar(int index);
 
+    void editCar(int index);
+
     void sortByPrice();
 
     void sortByYear();
@@ -28,5 +30,7 @@ public:
     void saveToFile(const std::string& filename) const;
 
     void loadFromFile(const std::string& filename);
+
+    void clear();
 };
 

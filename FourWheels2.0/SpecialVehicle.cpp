@@ -52,13 +52,7 @@ std::string SpecialVehicle::getDimensions() const
 
 void SpecialVehicle::displayInfo() const
 {
-	std::cout << "Brand: " << brand << std::endl;
-	std::cout << "Year: " << year << std::endl;
-	std::cout << "Price: " << price << std::endl;
-	std::cout << "Equipment: " << equipment << std::endl;
-	std::cout << "Country: " << country << std::endl;
-	std::cout << "Sale Date: " << saleDate << std::endl;
-	std::cout << "Buyer Name: " << buyerName << std::endl;
+	Car::displayInfo();
 	std::cout << "Vehicle Type: " << vehicleType << std::endl;
 	std::cout << "Weight: " << weight << " kg" << std::endl;
 	std::cout << "Dimensions: " << dimensions << std::endl;

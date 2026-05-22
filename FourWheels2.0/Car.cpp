@@ -1,7 +1,10 @@
 #include "Car.h"
 
+int Car::carCount = 0;
 Car::Car()
+
 {
+	carCount++;
 	brand = "No info";
 	year = 0;
 	price = 0.0;
@@ -9,6 +12,7 @@ Car::Car()
 	country = "No info";
 	saleDate = "No info";
 	buyerName = "No info";
+	
 }
 
 Car::Car(const std::string& brand, int year, double price, const std::string& equipment, const std::string& country, const std::string saleDate, const std::string& buyerName)
@@ -20,10 +24,12 @@ Car::Car(const std::string& brand, int year, double price, const std::string& eq
 	this->country = country;
 	this->saleDate = saleDate;
 	this->buyerName = buyerName;
+	carCount++;
 }
 
 Car::~Car()
 {
+	carCount--;
 }
 
 void Car::setBrand(std::string brand)
@@ -108,7 +114,18 @@ std::string Car::getBuyerName() const
 
 int Car::getCarCount()
 {
-	return 0;
+	return carCount;
+}
+
+void Car::displayInfo() const
+{
+	std::cout << "Brand: " << brand << "\n";
+	std::cout << "Year: " << year << "\n";
+	std::cout << "Price: $" << price << "\n";
+	std::cout << "Equipment: " << equipment << "\n";
+	std::cout << "Country: " << country << "\n";
+	std::cout << "Sale Date: " << saleDate << "\n";
+	std::cout << "Buyer Name: " << buyerName << "\n";
 }
 
 bool Car::operator<(const Car& other) const

@@ -52,13 +52,7 @@ double UsedCar::getMileage() const
 
 void UsedCar::displayInfo() const
 {
-	std::cout << "Brand: " << brand << std::endl;
-	std::cout << "Year: " << year << std::endl;
-	std::cout << "Price: " << price << std::endl;
-	std::cout << "Equipment: " << equipment << std::endl;
-	std::cout << "Country: " << country << std::endl;
-	std::cout << "Sale Date: " << saleDate << std::endl;
-	std::cout << "Buyer Name: " << buyerName << std::endl;
+    Car::displayInfo();
     std::cout << "Condition: " << condition << std::endl;
     std::cout << "Owner Name: " << ownerName << std::endl;
     std::cout << "Mileage: " << mileage << std::endl;

@@ -18,7 +18,7 @@ protected:
 public:
 	Car();
 	Car(const std::string& brand, int year, double price, const std::string& equipment, const std::string& country, const std::string saleDate, const std::string& buyerName);
-	virtual ~Car() = default;
+	virtual ~Car();
 
 	void setBrand(std::string brand);
 	void setYear(int year);
@@ -37,7 +37,7 @@ public:
 	std::string getBuyerName() const;
 	static int getCarCount();
 
-	virtual void displayInfo() const = 0;
+	virtual void displayInfo() const;
 	virtual void saveToFile(std::ofstream& file) const = 0;
 	virtual void loadFromFile(std::ifstream& file) = 0;
 	virtual std::string type()const = 0;

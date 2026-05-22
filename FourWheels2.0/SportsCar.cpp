@@ -52,13 +52,7 @@ int SportsCar::getHorsepower() const
 
 void SportsCar::displayInfo() const
 {
-	std::cout << "Brand: " << brand << std::endl;
-	std::cout << "Year: " << year << std::endl;
-	std::cout << "Price: " << price << std::endl;
-	std::cout << "Equipment: " << equipment << std::endl;
-	std::cout << "Country: " << country << std::endl;
-	std::cout << "Sale Date: " << saleDate << std::endl;
-	std::cout << "Buyer Name: " << buyerName << std::endl;
+	Car::displayInfo();
 	std::cout << "Acceleration: " << acceleration << " m/s^2" << std::endl;
 	std::cout << "Engine Volume: " << engineVolume << " L" << std::endl;
 	std::cout << "Horsepower: " << horsepower << " HP" << std::endl;
