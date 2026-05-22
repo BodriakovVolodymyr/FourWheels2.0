@@ -17,9 +17,15 @@ void CarManager::addCar(Car* car)
 
 void CarManager::showAll() const
 {
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
     for (int i = 0; i< cars.size();i++)
     {
-		std::cout << "~~~~~~~~~Car~~~~~~~~" << i + 1 << "~~~~~~~~~" << std::endl;
+		std::cout << "~~~~~~~~~Car~~~~~~~~\n" 
+            << i<< "\n~~~~~~~~~" << std::endl;
 		cars[i]->displayInfo();
     }
 }
@@ -110,6 +116,11 @@ void CarManager::editCar(int index)
 
 void CarManager::sortByPrice()
 {
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
     std::sort(cars.begin(), cars.end(),
         [](Car* a, Car* b)
         {
@@ -119,6 +130,11 @@ void CarManager::sortByPrice()
 
 void CarManager::sortByYear()
 {
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
     std::sort(cars.begin(), cars.end(),
         [](Car* a, Car* b)
         {
@@ -128,6 +144,11 @@ void CarManager::sortByYear()
 
 void CarManager::searchByBrand(const std::string& brand) const
 {
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
     bool found = false;
 
     for (auto car : cars)
