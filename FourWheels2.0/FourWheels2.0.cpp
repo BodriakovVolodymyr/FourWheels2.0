@@ -173,6 +173,8 @@ int main()
                         )
                     );
                     std::cout << "\nSports car added successfully!\n";
+                    pause();
+                    break;
                 }
                 else if (choise == 3)
                 {
@@ -219,6 +221,8 @@ int main()
                         )
                     );
                     std::cout << "\nSpecial vehicle added successfully!\n";
+                    pause();
+                    break;
                 }
                 else
                 {

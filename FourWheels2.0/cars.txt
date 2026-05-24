@@ -1,5 +1,5 @@
 Used Car
-Volvo
+Volvo 240
 1976
 5800
 Sport+
@@ -9,3 +9,190 @@ Bodriakov
 70
 Senkevich
 325000
+Sports Car
+Porshe 964
+1989
+32800
+Turbo
+Germany
+11.02.2025
+Glushenko O.V.
+3.2
+3.6
+250
+Special Vehicle
+Yamaha venture 
+2006
+5000
+Base
+Japan
+02.04.2026
+Shmelienko O.R.
+snowmobile
+230
+2705x900x1565
+Used Car
+Toyota Supra
+2004
+6200
+Comfort
+Japan
+12.03.2026
+Ivanenko P.P.
+82
+Kovalchuk
+210000
+Sports Car
+BMW M2
+2018
+45500
+M Package
+Germany
+21.06.2025
+Petrenko A.O.
+4.1
+3
+340
+Special Vehicle
+Caterpillar D6T LGP
+2015
+72000
+Industrial
+USA
+01.02.2026
+Bondarenko I.I.
+Bulldozer
+18500
+6200x3400x3900
+Used Car
+Ford Escape
+2011
+8900
+Titanium
+USA
+18.08.2025
+Melnyk V.V.
+76
+Tkachenko
+160000
+Sports Car
+Ferrari La Ferrari
+2020
+215000
+Premium
+Italy
+05.01.2026
+Kravets D.S.
+2.9
+4
+710
+Special Vehicle
+Komatsu PC 210
+2017
+98500
+Heavy Duty
+Japan
+11.11.2025
+Savchenko O.M.
+Excavator
+22300
+10400x3200x3500
+Used Car
+Audi A6
+2013
+13200
+Business
+Germany
+09.09.2025
+Romanenko A.P.
+88
+Shevchuk
+143000
+Sports Car
+Nissan GT-R
+2016
+36800
+Nismo
+Japan
+14.07.2026
+Hrytsenko M.V.
+3.8
+3.8
+570
+Special Vehicle
+John Deere 8200
+2019
+54000
+Farmer Pro
+USA
+22.05.2026
+Klymenko S.O.
+Tractor
+7400
+5100x2500x3100
+Used Car
+Honda Civic
+2008
+7100
+Elegance
+Japan
+16.04.2026
+Berezovskyi R.T.
+69
+Marchenko
+256000
+Sports Car
+Chevrolet Corvette
+2021
+67000
+Sport RS
+USA
+28.02.2026
+Danylchuk P.I.
+4.4
+6.2
+495
+Special Vehicle
+Mercedes-Benz Unimog 12V50L
+2014
+48000
+Rescue
+Germany
+03.03.2025
+Lysenko V.I.
+Fire Truck
+12800
+7800x2550x3400
+Used Car
+Skoda Octavia
+2015
+9800
+Style
+Czech Republic
+30.10.2025
+Maksymenko K.L.
+91
+Bondar
+119000
+Sports Car
+Lamborghini Temerario 
+2022
+310000
+Ultimate
+Italy
+17.08.2026
+Kozak O.V.
+2.7
+5.2
+780
+Special Vehicle
+Volvo A40D
+2018
+83000
+Construction
+Sweden
+06.06.2026
+Horobets P.M.
+Dump Truck
+16400
+9200x3100x3600
