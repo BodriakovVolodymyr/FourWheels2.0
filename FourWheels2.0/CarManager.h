@@ -16,6 +16,9 @@ public:
     void addCar(Car* car);
 
     void showAll() const;
+    void showUsedCars() const;
+    void showSportsCars() const;
+    void showSpecialVehicles() const;
 
     void removeCar(int index);
 
@@ -26,6 +29,8 @@ public:
     void sortByYear();
 
     void searchByBrand(const std::string& brand) const;
+    void searchByIndex(int index) const;
+    void searchByPriceRange(double minPrice, double maxPrice) const;
 
     void saveToFile(const std::string& filename) const;
 

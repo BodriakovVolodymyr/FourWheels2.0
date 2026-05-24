@@ -30,9 +30,57 @@ void CarManager::showAll() const
     }
 }
 
+void CarManager::showUsedCars() const
+{
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
+	for (auto car : cars)
+	{
+		if (car->type() == "Used Car")
+		{
+			car->displayInfo();
+		}
+	}
+}
+
+void CarManager::showSportsCars() const
+{
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
+	for (auto car : cars)
+	{
+		if (car->type() == "Sports Car")
+		{
+			car->displayInfo();
+		}
+	}
+}
+
+void CarManager::showSpecialVehicles() const
+{
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
+	for (auto car : cars)
+	{
+		if (car->type() == "Special Vehicle")
+		{
+			car->displayInfo();
+		}
+	}
+}
+
 void CarManager::removeCar(int index)
 {
-    if (index < 0 || index >= static_cast<int>(cars.size())) // tra to in
+    if (index < 0 || index >= static_cast<int>(cars.size())) // transf to in
     {
         throw std::out_of_range("Invalid index");
     }
@@ -154,6 +202,40 @@ void CarManager::searchByBrand(const std::string& brand) const
     for (auto car : cars)
     {
         if (car->getBrand() == brand)
+        {
+            car->displayInfo();
+            found = true;
+        }
+    }
+
+    if (!found)
+    {
+        std::cout << "Cars not found\n";
+    }
+}
+
+void CarManager::searchByIndex(int index) const
+{
+	if (index < 0 || index >= static_cast<int>(cars.size()))
+	{
+		std::cout << "Invalid index\n";
+		return;
+	}
+	cars[index]->displayInfo();
+}
+
+void CarManager::searchByPriceRange(double minPrice, double maxPrice) const
+{
+    if (cars.empty())
+    {
+        std::cout << "No cars available\n";
+        return;
+    }
+    bool found = false;
+
+    for (auto car : cars)
+    {
+        if (car->getPrice() >= minPrice && car->getPrice() <= maxPrice)
         {
             car->displayInfo();
             found = true;
