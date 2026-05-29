@@ -24,8 +24,8 @@ void CarManager::showAll() const
     }
     for (int i = 0; i< cars.size();i++)
     {
-		std::cout << "~~~~~~~~~Car~~~~~~~~\n" 
-            << i<< "\n~~~~~~~~~" << std::endl;
+	
+        std::cout << std::endl;
 		cars[i]->displayInfo();
     }
 }
@@ -78,21 +78,34 @@ void CarManager::showSpecialVehicles() const
 	}
 }
 
-void CarManager::removeCar(int index)
+void CarManager::removeCar(int id)
 {
-    if (index < 0 || index >= static_cast<int>(cars.size())) // transf to in
+    for (int i = 0; i < cars.size(); i++)
     {
-        throw std::out_of_range("Invalid index");
+        if (cars[i]->getId() == id)
+        {
+            delete cars[i];
+            cars.erase(cars.begin() + i);
+            return;
+        }
     }
 
-    delete cars[index];
-
-    cars.erase(cars.begin() + index);
+    throw std::out_of_range("Car not found");
 }
 
-void CarManager::editCar(int index)
+void CarManager::editCar(int id)
 {
-    if (index < 0 || index >= static_cast<int>(cars.size()))
+    int index = -1;
+    for (int i = 0; i < cars.size(); i++)
+    {
+        if (cars[i]->getId() == id)
+        {
+            index = i;
+            break;
+        }
+    }
+
+    if (index == -1)
     {
         throw std::out_of_range("Invalid index");
     }
@@ -214,9 +227,18 @@ void CarManager::searchByBrand(const std::string& brand) const
     }
 }
 
-void CarManager::searchByIndex(int index) const
+void CarManager::searchByIndex(int id) const
 {
-	if (index < 0 || index >= static_cast<int>(cars.size()))
+	int index = -1;
+	for (int i = 0; i < cars.size(); i++)
+	{
+		if (cars[i]->getId() == id)
+		{
+			index = i;
+			break;
+		}
+	}
+	if (index == -1)
 	{
 		std::cout << "Invalid index\n";
 		return;

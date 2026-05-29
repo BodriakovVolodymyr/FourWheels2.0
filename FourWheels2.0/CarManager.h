@@ -20,16 +20,16 @@ public:
     void showSportsCars() const;
     void showSpecialVehicles() const;
 
-    void removeCar(int index);
+    void removeCar(int id);
 
-    void editCar(int index);
+    void editCar(int id);
 
     void sortByPrice();
 
     void sortByYear();
 
     void searchByBrand(const std::string& brand) const;
-    void searchByIndex(int index) const;
+    void searchByIndex(int id) const;
     void searchByPriceRange(double minPrice, double maxPrice) const;
 
     void saveToFile(const std::string& filename) const;

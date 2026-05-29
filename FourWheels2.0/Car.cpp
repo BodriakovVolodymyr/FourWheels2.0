@@ -1,10 +1,10 @@
 #include "Car.h"
 
-int Car::carCount = 0;
+int Car::nextId = 1;
 Car::Car()
 
 {
-	carCount++;
+	id = nextId++;
 	brand = "No info";
 	year = 0;
 	price = 0.0;
@@ -17,6 +17,7 @@ Car::Car()
 
 Car::Car(const std::string& brand, int year, double price, const std::string& equipment, const std::string& country, const std::string saleDate, const std::string& buyerName)
 {
+	id = nextId++;
 	this->brand = brand;
 	setYear(year);
 	setPrice(price);
@@ -24,12 +25,12 @@ Car::Car(const std::string& brand, int year, double price, const std::string& eq
 	this->country = country;
 	this->saleDate = saleDate;
 	this->buyerName = buyerName;
-	carCount++;
+	
 }
 
 Car::~Car()
 {
-	carCount--;
+	
 }
 
 void Car::setBrand(std::string brand)
@@ -112,13 +113,15 @@ std::string Car::getBuyerName() const
     return buyerName;
 }
 
-int Car::getCarCount()
+int Car::getId() const
 {
-	return carCount;
+	return id;
 }
+
 
 void Car::displayInfo() const
 {
+	std::cout << "Index: " << id << "\n";
 	std::cout << "Brand: " << brand << "\n";
 	std::cout << "Year: " << year << "\n";
 	std::cout << "Price: $" << price << "\n";

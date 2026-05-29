@@ -7,6 +7,8 @@
 class Car
 {
 protected:
+	int id;
+	static int nextId;
 	std::string brand;
 	int year;
 	double price;
@@ -14,7 +16,7 @@ protected:
 	std::string country;
 	std::string saleDate;
 	std::string buyerName;
-	static int carCount;
+	
 public:
 	Car();
 	Car(const std::string& brand, int year, double price, const std::string& equipment, const std::string& country, const std::string saleDate, const std::string& buyerName);
@@ -35,7 +37,7 @@ public:
 	std::string getCountry() const;
 	std::string getSaleDate() const;
 	std::string getBuyerName() const;
-	static int getCarCount();
+	int getId() const;
 
 	virtual void displayInfo() const;
 	virtual void saveToFile(std::ofstream& file) const = 0;
