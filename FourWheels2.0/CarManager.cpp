@@ -326,6 +326,11 @@ void CarManager::loadFromFile(const std::string& filename)
     }
 }
 
+int CarManager::getCarsCount() const
+{
+    return cars.size();
+}
+
 void CarManager::clear()
 {
     for (auto car : cars)

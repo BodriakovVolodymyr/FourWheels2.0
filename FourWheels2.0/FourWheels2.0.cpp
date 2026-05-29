@@ -35,6 +35,7 @@ int main()
         std::cout << "6. Edit Car\n";
         std::cout << "7. Save To File\n";
         std::cout << "8. Load From File\n";
+        std::cout << "9. Show Car Count\n";
         std::cout << "0. Exit\n";
         std::cout << "Choose: ";
 
@@ -393,6 +394,16 @@ int main()
                 manager.loadFromFile("cars.txt");
 
                 std::cout << "\nLoaded successfully!\n";
+                pause();
+                break;
+            }
+
+            case 9:
+            {
+                clearScreen();
+                std::cout << "\nTotal cars: "
+                    << manager.getCarsCount()
+                    << std::endl;
                 pause();
                 break;
             }
